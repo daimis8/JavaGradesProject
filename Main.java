@@ -13,16 +13,56 @@ public class Main {
             name = scanner.nextLine();
 
             System.out.println("What is students math grade?");
-            mathGrade = scanner.nextInt();
+            while(true){
+                try {
+                    mathGrade = scanner.nextInt();
+                    if(mathGrade>0 && mathGrade <= 10){
+                        break;
+                    }
+                    else{
+                        System.out.println("Please enter a number in an interval 1-10");
+                        scanner.next();
+                    }
+                }
+                catch (InputMismatchException e) {
+                    System.out.println("Enter a number! ");
+                    scanner.next();
+                }
+            }
 
             System.out.println("What is students english grade?");
-            englishGrade = scanner.nextInt();
-
+            while(true){
+                try {
+                    englishGrade = scanner.nextInt();
+                    if(englishGrade>0 && englishGrade <= 10){
+                        break;
+                    }
+                    else{
+                        System.out.println("Please enter a number in an interval 1-10");
+                    }
+                }
+                catch (InputMismatchException e) {
+                    System.out.println("Enter a number! ");
+                    scanner.next();
+                }
+            }
+            
             System.out.println("What is students biology grade?");
-            biologyGrade = scanner.nextInt();
-        }
-        catch(InputMismatchException e) {
-            System.out.println("Enter a number!");
+            while(true){
+                try {
+                    biologyGrade = scanner.nextInt();
+                    if(biologyGrade>0 && biologyGrade <= 10){
+                        break;
+                    }
+                    else{
+                        System.out.println("Please enter a number in an interval 1-10");
+                    }
+                }
+                catch (InputMismatchException e) {
+                    System.out.println("Enter a number! ");
+                    scanner.next();
+                }
+            }
         }
 
         avg = (double)(mathGrade+englishGrade+biologyGrade)/3;
