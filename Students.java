@@ -6,11 +6,11 @@ public class Students {
     double avg;
 
     Students(String name, int mathGrade, int englishGrade, int biologyGrade, double avg) {
-        this.name = getName();
-        this.mathGrade = getMathGrade();
-        this.englishGrade = getEnglishGrade();
-        this.biologyGrade = getBiologyGrade();
-        this.avg = getAvg();
+        this.name = name;
+        this.mathGrade = mathGrade;
+        this.englishGrade = englishGrade;
+        this.biologyGrade = biologyGrade;
+        this.avg = avg;
     }
 
     public String getName() {
@@ -28,6 +28,7 @@ public class Students {
     public double getAvg() {
         return avg;
     }
+
 
 
 }
