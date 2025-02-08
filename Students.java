@@ -1,9 +1,9 @@
 public class Students {
-    String name;
-    int mathGrade;
-    int englishGrade;
-    int biologyGrade;
-    double avg;
+    private String name;
+    private int mathGrade;
+    private int englishGrade;
+    private int biologyGrade;
+    private double avg;
 
     Students(String name, int mathGrade, int englishGrade, int biologyGrade, double avg) {
         this.name = name;
@@ -27,6 +27,10 @@ public class Students {
     }
     public double getAvg() {
         return avg;
+    }
+    @Override
+    public String toString() {
+        return "\nStudent "+name+":\nMath grade: "+mathGrade+";\nEnglish grade: "+englishGrade+";\nBiology grade: "+biologyGrade+";\nAverage: "+avg+";\n";
     }
 
 
